@@ -1,23 +1,60 @@
 aid: biosceptre
+
 name: Biosceptre
-description: 'Biosceptre is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Biosceptre International Limited is a preclinical-stage oncology company developing an adaptor CAR‑T platform called BRiDGECAR™. The platform redirects a single engineered T‑cell to multiple tumour antigens through interchangeable adaptors, offering flexibility, tunability, and control over CAR‑T therapies. Biosceptre engages with pharmaceutical and biotech partners for adaptor‑based cell therapy and antibody programs, and provides data, publications, and clinical information on its website.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biosceptre/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Oncology
+- Biotechnology
+- CAR-T
+- Preclinical
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biosceptre-hosts.yml
+- type: Vendors
+  url: vendors/biosceptre-vendors.yml
+- type: DomainSecurity
+  url: security/biosceptre-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://biosceptre.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Biosceptre website renders a JavaScript shell and provides no machine‑readable API specification.
+  evidence:
+    - url: https://biosceptre.com/
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
